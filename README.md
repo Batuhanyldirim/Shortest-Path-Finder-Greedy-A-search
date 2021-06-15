@@ -11,7 +11,9 @@ In Gready Best-first Search we are choosing the next step in which has the close
 
 If we have the following possible destinations in our next moves {C1,, C2, C3, ... , Cn} we know the net distance between those cities and desired city, so we are looking for Cxwhich gives smallest net distance to given city.We can calculate net distance by heuristic function h(Cx)
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+
+![image](https://user-images.githubusercontent.com/41572446/121976803-da7e0080-cd84-11eb-8850-66d4425e4037.png)
+
 
 
 We used this function because we are making a greedy searchand this does not guaranties the optimum result. Because we are choosing our next step with only consideration of net distance from the next city and desired city, but real distance may differ in this situation.
@@ -23,11 +25,11 @@ In A* search we are choosing the next step in consideration with the real distan
 
 First step is the same as Greedy Best-first Search so it is the following equation if we have {C1,, C2, C3, ... , Cn} as possible destinations in our next moves and have heuristic function H(Cx) which gives net distance from given city to desired city.
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+![image](https://user-images.githubusercontent.com/41572446/121976853-ef5a9400-cd84-11eb-9fd4-21411940531b.png)
 
 The second step is the calculation of the road we have took so far. If we have already come along with the path {C1,, C2, C3, ... , Cn} and C2-1gives the real distance between C1to C2then we can calculate g(n) as follows;
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+![image](https://user-images.githubusercontent.com/41572446/121976870-fe414680-cd84-11eb-8fa3-20d94ee5fb74.png)
 
 As a conclusion we are looking for min(h(n)+g(n)) to decide our next move.We are using this equationbecause we want to minimize our traveled distance, so we are considering the distance we already traveled to not get mocked by net distance instead of real distance.
 
